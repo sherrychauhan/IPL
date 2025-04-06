@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Pagination with Editable Fields and Bought Players</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <h1>JSON Data Grouped by Team</h1>
+    <input type="file" id="file-input" accept=".json">
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Sr. No</th>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Role (Editable)</th>
+                <th>International</th>
+                <th>Bought by (Editable)</th>
+                <th>Points (Editable)</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="pagination">
+        <button id="prev-btn" class="page-button" disabled>Previous</button>
+        <button id="next-btn" class="page-button" disabled>Next</button>
+    </div>
+    <div class="save-button-container">
+        <button id="save-btn" class="save-button" disabled>Save JSON</button>
+    </div>
+
+    <div id="bought-players-section" style="display: none;">
+        <h2>Bought Players</h2>
+        <table id="bought-players-table">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Points</th>
+                    <th>Bought By</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="pagination">
+            <button id="bought-prev-btn" class="page-button" disabled>Previous</button>
+            <button id="bought-next-btn" class="page-button" disabled>Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
