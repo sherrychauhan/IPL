@@ -9,11 +9,15 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+    
+        /* Tabs Container */
         .tabs {
             display: flex;
+            flex-wrap: nowrap; /* Ensure tabs stay in a single row on larger screens */
             border-bottom: 2px solid #ccc;
             margin-bottom: 20px;
         }
+    
         .tab {
             padding: 10px 20px;
             cursor: pointer;
@@ -21,7 +25,11 @@
             border-bottom: none;
             margin-right: 5px;
             background-color: #f4f4f4;
+            text-align: center;
+            flex: 1 1 auto; /* Adjust tab width dynamically */
+            box-sizing: border-box;
         }
+    
         .tab.active {
             background-color: #fff;
             font-weight: bold;
@@ -29,38 +37,78 @@
             border-left: 2px solid #333;
             border-right: 2px solid #333;
         }
+    
         .content {
             display: none;
         }
+    
         .content.active {
             display: block;
         }
+    
         table {
             width: 100%;
             border-collapse: collapse;
         }
+    
         th, td {
             border: 1px solid #ccc;
             padding: 10px;
             text-align: left;
         }
+    
         th {
             background-color: #f4f4f4;
         }
+    
         .captain {
             background-color: #92D050; /* Green for captain */
         }
+    
         .vice-captain {
             background-color: #FFFF00; /* Yellow for vice-captain */
         }
+    
         .rank-1 {
             background-color: gold; /* Gold for rank 1 */
         }
+    
         .rank-2 {
             background-color: silver; /* Silver for rank 2 */
         }
+    
         .rank-3 {
             background-color: #cd7f32; /* Bronze for rank 3 */
+        }
+    
+        /* Mobile-specific adjustments */
+        @media (max-width: 768px) {
+            .tabs {
+                overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+                flex-wrap: nowrap; /* Prevent wrapping */
+                white-space: nowrap; /* Ensure tabs stay in one row */
+            }
+    
+            .tab {
+                flex: 0 0 calc(33.33% - 10px); /* Show 3 tabs in the visible area on smaller screens */
+                margin-right: 5px;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            body {
+                margin: 10px;
+            }
+    
+            th, td {
+                font-size: 12px; /* Reduce table font size for smaller screens */
+                padding: 8px;
+            }
+    
+            .tab {
+                padding: 8px; /* Reduce tab padding for smaller screens */
+                font-size: 14px; /* Adjust tab font size */
+            }
         }
     </style>
 </head>
@@ -78,7 +126,7 @@
 
     <script>
         // Fetch JSON from the Python server
-        fetch('players2.json') // Replace with your hosted JSON file path if needed
+        fetch('players4.json') // Replace with your hosted JSON file path if needed
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -200,6 +248,9 @@
                 });
             })
             .catch(error => console.error('Error fetching JSON:', error));
+
+
+
     </script>
 </body>
 </html>
