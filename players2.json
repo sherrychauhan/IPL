@@ -1,0 +1,722 @@
+[
+    {
+        "playerName": "R Ashwin",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "KL Rahul",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Captain"
+    },
+    {
+        "playerName": "Noor Ahmad(OP)",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Khaleel Ahmed",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Shivam Dube",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "T Natarajan",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Deepak Hooda",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Matheesha Pathirana(OP)",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Sam Curran(OP)",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Faf du Plessis (OP)",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Rachin Ravindra(OP)",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Kagiso Rabada (OP)",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Ruturaj Gaikwad",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Jos Buttler (OP)",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Captain"
+    },
+    {
+        "playerName": "Abishek Porel",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Vijay Shankar",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "MS Dhoni",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Tristan Stubbs (OP)",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Jake Fraser-McGurk (OP)",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Mohammed Siraj",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Axar Patel",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Captain"
+    },
+    {
+        "playerName": "Prasidh Krishna",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Mukesh Kumar",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Rahul Tripathi",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Ravindra Jadeja",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Sunil Narine (OP)",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Vice-Captain"
+    },
+    {
+        "playerName": "Rahul Tewatia",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Varun Chakravarthy",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Vice-Captain"
+    },
+    {
+        "playerName": "Glenn Phillips (OP)",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Rashid Khan (OP)",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Sai Sudharsan",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Kuldeep Yadav",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Ashutosh Sharma",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Harshit Rana",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Shubman Gill",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Vice-Captain"
+    },
+    {
+        "playerName": "Akash Deep",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Washington Sundar",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Venkatesh Iyer",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Ajinkya Rahane",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Mitchell Starc (OP)",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Mohsin Khan",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Andre Russell (OP)",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Ramandeep Singh",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Ayush Badoni",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Quinton de Kock (OP)",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "David Miller (OP)",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Aiden Markram (OP)",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Vaibhav Arora",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Rishabh Pant",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Captain"
+    },
+    {
+        "playerName": "Avesh Khan",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Abdul Samad",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Mitchell Santner (OP)",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Manish Pandey",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Mayank Yadav",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Tilak Varma",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Nicholas Pooran (OP)",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Trent Boult (OP)",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Shahbaz Ahmed",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Karn Sharma",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Marcus Stoinis (OP)",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Rinku Singh",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Mitchell Marsh (OP)",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Lockie Ferguson (OP)",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Rohit Sharma",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Captain"
+    },
+    {
+        "playerName": "Suryakumar Yadav",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Jasprit Bumrah",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Arshdeep Singh",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Krunal Pandya",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Ravi Bishnoi",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Deepak Chahar",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Marco Jansen (OP)",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Priyansh Arya",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Glenn Maxwell (OP)",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Will Jacks (OP)",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Prabhsimran Singh",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Shubham Dubey",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Ryan Rickelton (OP)",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Hardik Pandya",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Vice-Captain"
+    },
+    {
+        "playerName": "Suryansh Shedge",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Harpreet Brar",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Bhuvneshwar Kumar",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Shashank Singh",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Devdutt Padikkal",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Jofra Archer (OP)",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Shreyas Iyer",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Vice-Captain"
+    },
+    {
+        "playerName": "Tim David (OP)",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Nehal Wadhera",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Yuzvendra Chahal",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Vice-Captain"
+    },
+    {
+        "playerName": "Liam Livingstone (OP)",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Yash Thakur",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Jitesh Sharma",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Pat Cummins (OP)",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Vaibhav Suryavanshi",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Dhruv Jurel",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Josh Hazlewood (OP)",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Phil Salt (OP)",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Rajat Patidar",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Yash Dayal",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Shimron Hetmyer (OP)",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Abhishek Sharma",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Captain"
+    },
+    {
+        "playerName": "Maheesh Theekshana (OP)",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Akash Madhwal",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Suyash Sharma",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Nitish Rana",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Yashasvi Jaiswal",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Vice-Captain"
+    },
+    {
+        "playerName": "Riyan Parag",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Travis Head (OP)",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Captain"
+    },
+    {
+        "playerName": "Ishan Kishan",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Sandeep Sharma",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Rahul Chahar",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Virat Kohli",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Captain"
+    },
+    {
+        "playerName": "Tushar Deshpande",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Wanindu Hasranga (OP)",
+        "owner": "Bhushan",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Mohammed Shami",
+        "owner": "Shaurabh",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Nitish Kumar Reddy",
+        "owner": "Karthik",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Harshal Patel",
+        "owner": "Kuljeet",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Heinrich Klaasen (OP)",
+        "owner": "Ajay",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Abhinav Manohar",
+        "owner": "Mayur",
+        "points": 0,
+        "role": "Player"
+    },
+    {
+        "playerName": "Sanju Samson",
+        "owner": "Sherry",
+        "points": 0,
+        "role": "Vice-Captain"
+    },
+    {
+        "playerName": "Adam Zampa (OP)",
+        "owner": "Sanjay",
+        "points": 0,
+        "role": "Player"
+    }
+]

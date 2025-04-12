@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owners and Players</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            margin-right: 5px;
+            background-color: #f4f4f4;
+        }
+        .tab.active {
+            background-color: #fff;
+            font-weight: bold;
+            border-top: 2px solid #333;
+            border-left: 2px solid #333;
+            border-right: 2px solid #333;
+        }
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .captain {
+            background-color: #92D050; /* Green for captain */
+        }
+        .vice-captain {
+            background-color: #FFFF00; /* Yellow for vice-captain */
+        }
+        .rank-1 {
+            background-color: gold; /* Gold for rank 1 */
+        }
+        .rank-2 {
+            background-color: silver; /* Silver for rank 2 */
+        }
+        .rank-3 {
+            background-color: #cd7f32; /* Bronze for rank 3 */
+        }
+    </style>
+</head>
+<body>
+    <div id="totalRanks">
+        <!-- Total points and ranks will be dynamically displayed here -->
+    </div>
+    <h1>Owners and Players</h1>
+    <div class="tabs" id="tabs">
+        <!-- Tabs will be dynamically added here -->
+    </div>
+    <div id="contents">
+        <!-- Player tables for each owner will be dynamically added here -->
+    </div>
+
+    <script>
+        // Fetch JSON from the Python server
+        fetch('players2.json') // Replace with your hosted JSON file path if needed
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(playerData => {
+                const tabsContainer = document.getElementById("tabs");
+                const contentsContainer = document.getElementById("contents");
+                const totalRanksContainer = document.getElementById("totalRanks");
+
+                // Group players by owner
+                const groupedData = {};
+                playerData.forEach(player => {
+                    if (!groupedData[player.owner]) {
+                        groupedData[player.owner] = [];
+                    }
+                    groupedData[player.owner].push(player);
+                });
+
+                // Calculate total points for each owner
+                const ownerPoints = Object.keys(groupedData).map(owner => {
+                    const totalPoints = groupedData[owner].reduce((sum, player) => sum + player.points, 0);
+                    return { owner, totalPoints };
+                });
+
+                // Sort owners by total points to determine ranks
+                ownerPoints.sort((a, b) => b.totalPoints - a.totalPoints);
+                ownerPoints.forEach((data, index) => {
+                    data.rank = index + 1;
+                });
+
+                // Display total points and ranks at the top
+                const rankTable = document.createElement("table");
+                rankTable.innerHTML = `
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Owner</th>
+                            <th>Total Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${ownerPoints
+                            .map(data => `
+                                <tr class="${data.rank === 1 ? 'rank-1' : data.rank === 2 ? 'rank-2' : data.rank === 3 ? 'rank-3' : ''}">
+                                    <td>${data.rank}</td>
+                                    <td>${data.owner}</td>
+                                    <td>${data.totalPoints}</td>
+                                </tr>
+                            `)
+                            .join("")}
+                    </tbody>
+                `;
+                totalRanksContainer.appendChild(rankTable);
+
+                // Create tabs and contents for each owner
+                let firstOwner = true;
+                for (const owner in groupedData) {
+                    // Sort players within each owner: Captain > Vice-Captain > others
+                    groupedData[owner].sort((a, b) => {
+                        if (a.role === "Captain") return -1;
+                        if (b.role === "Captain") return 1;
+                        if (a.role === "Vice-Captain") return -1;
+                        if (b.role === "Vice-Captain") return 1;
+                        return 0;
+                    });
+
+                    // Create a tab
+                    const tab = document.createElement("div");
+                    tab.className = `tab ${firstOwner ? "active" : ""}`;
+                    tab.textContent = owner;
+                    tab.dataset.owner = owner;
+                    tabsContainer.appendChild(tab);
+
+                    // Create the content for this owner
+                    const content = document.createElement("div");
+                    content.className = `content ${firstOwner ? "active" : ""}`;
+                    const table = document.createElement("table");
+                    table.innerHTML = `
+                        <thead>
+                            <tr>
+                                <th>Player Name</th>
+                                <th>Points</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${groupedData[owner]
+                                .map(player => `
+                                    <tr class="${player.role === 'Captain' ? 'captain' : player.role === 'Vice-Captain' ? 'vice-captain' : ''}">
+                                        <td>${player.playerName}</td>
+                                        <td>${player.points}</td>
+                                        <td>${player.role}</td>
+                                    </tr>
+                                `)
+                                .join("")}
+                        </tbody>
+                    `;
+                    content.appendChild(table);
+                    contentsContainer.appendChild(content);
+
+                    firstOwner = false;
+                }
+
+                // Handle tab click event
+                document.querySelectorAll(".tab").forEach(tab => {
+                    tab.addEventListener("click", function () {
+                        const owner = this.dataset.owner;
+
+                        // Activate the clicked tab
+                        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+                        this.classList.add("active");
+
+                        // Show the corresponding content
+                        document.querySelectorAll(".content").forEach(c => c.classList.remove("active"));
+                        document.querySelectorAll(".content")[Array.from(tabsContainer.children).indexOf(this)].classList.add("active");
+                    });
+                });
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+</body>
+</html>
