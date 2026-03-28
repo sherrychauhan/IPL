@@ -1,0 +1,492 @@
+[
+    {
+        "Match": 1,
+        "Date": "March 28, Saturday",
+        "Fixture": "Royal Challengers Bengaluru vs Sunrisers Hyderabad",
+        "Time": "19:30:00",
+        "Venue": "Bengaluru"
+    },
+    {
+        "Match": 2,
+        "Date": "March 29, Sunday",
+        "Fixture": "Mumbai Indians vs Kolkata Knight Riders",
+        "Time": "19:30:00",
+        "Venue": "Mumbai"
+    },
+    {
+        "Match": 3,
+        "Date": "March 30, Monday",
+        "Fixture": "Rajasthan Royals vs Chennai Super Kings",
+        "Time": "19:30:00",
+        "Venue": "Guwahati"
+    },
+    {
+        "Match": 4,
+        "Date": "March 31, Tuesday",
+        "Fixture": "Punjab Kings vs Gujarat Titans",
+        "Time": "19:30:00",
+        "Venue": "New Chandigarh"
+    },
+    {
+        "Match": 5,
+        "Date": "April 1, Wednesday",
+        "Fixture": "Lucknow Super Giants vs Delhi Capitals",
+        "Time": "19:30:00",
+        "Venue": "Lucknow"
+    },
+    {
+        "Match": 6,
+        "Date": "April 2, Thursday",
+        "Fixture": "Kolkata Knight Riders vs Sunrisers Hyderabad",
+        "Time": "19:30:00",
+        "Venue": "Kolkata"
+    },
+    {
+        "Match": 7,
+        "Date": "April 3, Friday",
+        "Fixture": "Chennai Super Kings vs Punjab Kings",
+        "Time": "19:30:00",
+        "Venue": "Chennai"
+    },
+    {
+        "Match": 8,
+        "Date": "April 4, Saturday",
+        "Fixture": "Delhi Capitals vs Mumbai Indians",
+        "Time": "15:30:00",
+        "Venue": "Delhi"
+    },
+    {
+        "Match": 9,
+        "Date": "April 4, Saturday",
+        "Fixture": "Gujarat Titans vs Rajasthan Royals",
+        "Time": "19:30:00",
+        "Venue": "Ahmedabad"
+    },
+    {
+        "Match": 10,
+        "Date": "April 5, Sunday",
+        "Fixture": "Sunrisers Hyderabad vs Lucknow Super Giants",
+        "Time": "15:30:00",
+        "Venue": "Hyderabad"
+    },
+    {
+        "Match": 11,
+        "Date": "April 5, Sunday",
+        "Fixture": "Royal Challengers Bengaluru vs Chennai Super Kings",
+        "Time": "19:30:00",
+        "Venue": "Bengaluru"
+    },
+    {
+        "Match": 12,
+        "Date": "April 6, Monday",
+        "Fixture": "Kolkata Knight Riders vs Punjab Kings",
+        "Time": "19:30:00",
+        "Venue": "Kolkata"
+    },
+    {
+        "Match": 13,
+        "Date": "April 7, Tuesday",
+        "Fixture": "Rajasthan Royals vs Mumbai Indians",
+        "Time": "19:30:00",
+        "Venue": "Guwahati"
+    },
+    {
+        "Match": 14,
+        "Date": "April 8, Wednesday",
+        "Fixture": "Delhi Capitals vs Gujarat Titans",
+        "Time": "19:30:00",
+        "Venue": "Delhi"
+    },
+    {
+        "Match": 15,
+        "Date": "April 9, Thursday",
+        "Fixture": "Kolkata Knight Riders vs Lucknow Super Giants",
+        "Time": "19:30:00",
+        "Venue": "Kolkata"
+    },
+    {
+        "Match": 16,
+        "Date": "April 10, Friday",
+        "Fixture": "Rajasthan Royals vs Royal Challengers Bengaluru",
+        "Time": "19:30:00",
+        "Venue": "Guwahati"
+    },
+    {
+        "Match": 17,
+        "Date": "April 11, Saturday",
+        "Fixture": "Punjab Kings vs Sunrisers Hyderabad",
+        "Time": "15:30:00",
+        "Venue": "New Chandigarh"
+    },
+    {
+        "Match": 18,
+        "Date": "April 11, Saturday",
+        "Fixture": "Chennai Super Kings vs Delhi Capitals",
+        "Time": "19:30:00",
+        "Venue": "Chennai"
+    },
+    {
+        "Match": 19,
+        "Date": "April 12, Sunday",
+        "Fixture": "Lucknow Super Giants vs Gujarat Titans",
+        "Time": "15:30:00",
+        "Venue": "Lucknow"
+    },
+    {
+        "Match": 20,
+        "Date": "April 12, Sunday",
+        "Fixture": "Mumbai Indians vs Royal Challengers Bengaluru",
+        "Time": "19:30:00",
+        "Venue": "Mumbai"
+    },
+    {
+        "Match": 21,
+        "Date": "April 13, Monday",
+        "Fixture": "Sunrisers Hyderabad vs Rajasthan Royals",
+        "Time": "19:30:00",
+        "Venue": "Hyderabad"
+    },
+    {
+        "Match": 22,
+        "Date": "April 14, Tuesday",
+        "Fixture": "Chennai Super Kings vs Kolkata Knight Riders",
+        "Time": "19:30:00",
+        "Venue": "Chennai"
+    },
+    {
+        "Match": 23,
+        "Date": "April 15, Wednesday",
+        "Fixture": "Royal Challengers Bengaluru vs Lucknow Super Giants",
+        "Time": "19:30:00",
+        "Venue": "Bengaluru"
+    },
+    {
+        "Match": 24,
+        "Date": "April 16, Thursday",
+        "Fixture": "Mumbai Indians vs Punjab Kings",
+        "Time": "19:30:00",
+        "Venue": "Mumbai"
+    },
+    {
+        "Match": 25,
+        "Date": "April 17, Friday",
+        "Fixture": "Gujarat Titans vs Kolkata Knight Riders",
+        "Time": "19:30:00",
+        "Venue": "Ahmedabad"
+    },
+    {
+        "Match": 26,
+        "Date": "April 18, Saturday",
+        "Fixture": "Royal Challengers Bengaluru vs Delhi Capitals",
+        "Time": "15:30:00",
+        "Venue": "Bengaluru"
+    },
+    {
+        "Match": 27,
+        "Date": "April 18, Saturday",
+        "Fixture": "Sunrisers Hyderabad vs Chennai Super Kings",
+        "Time": "19:30:00",
+        "Venue": "Hyderabad"
+    },
+    {
+        "Match": 28,
+        "Date": "April 19, Sunday",
+        "Fixture": "Kolkata Knight Riders vs Rajasthan Royals",
+        "Time": "15:30:00",
+        "Venue": "Kolkata"
+    },
+    {
+        "Match": 29,
+        "Date": "April 19, Sunday",
+        "Fixture": "Punjab Kings vs Lucknow Super Giants",
+        "Time": "19:30:00",
+        "Venue": "New Chandigarh"
+    },
+    {
+        "Match": 30,
+        "Date": "April 20, Monday",
+        "Fixture": "Gujarat Titans vs Mumbai Indians",
+        "Time": "19:30:00",
+        "Venue": "Ahmedabad"
+    },
+    {
+        "Match": 31,
+        "Date": "April 21, Tuesday",
+        "Fixture": "Sunrisers Hyderabad vs Delhi Capitals",
+        "Time": "19:30:00",
+        "Venue": "Hyderabad"
+    },
+    {
+        "Match": 32,
+        "Date": "April 22, Wednesday",
+        "Fixture": "Lucknow Super Giants vs Rajasthan Royals",
+        "Time": "19:30:00",
+        "Venue": "Lucknow"
+    },
+    {
+        "Match": 33,
+        "Date": "April 23, Thursday",
+        "Fixture": "Mumbai Indians vs Chennai Super Kings",
+        "Time": "19:30:00",
+        "Venue": "Mumbai"
+    },
+    {
+        "Match": 34,
+        "Date": "April 24, Friday",
+        "Fixture": "Royal Challengers Bengaluru vs Gujarat Titans",
+        "Time": "19:30:00",
+        "Venue": "Bengaluru"
+    },
+    {
+        "Match": 35,
+        "Date": "April 25, Saturday",
+        "Fixture": "Delhi Capitals vs Punjab Kings",
+        "Time": "15:30:00",
+        "Venue": "Delhi"
+    },
+    {
+        "Match": 36,
+        "Date": "April 25, Saturday",
+        "Fixture": "Rajasthan Royals vs Sunrisers Hyderabad",
+        "Time": "19:30:00",
+        "Venue": "Jaipur"
+    },
+    {
+        "Match": 37,
+        "Date": "April 26, Sunday",
+        "Fixture": "Gujarat Titans vs Chennai Super Kings",
+        "Time": "15:30:00",
+        "Venue": "Ahmedabad"
+    },
+    {
+        "Match": 38,
+        "Date": "April 26, Sunday",
+        "Fixture": "Lucknow Super Giants vs Kolkata Knight Riders",
+        "Time": "19:30:00",
+        "Venue": "Lucknow"
+    },
+    {
+        "Match": 39,
+        "Date": "April 27, Monday",
+        "Fixture": "Delhi Capitals vs Royal Challengers Bengaluru",
+        "Time": "19:30:00",
+        "Venue": "Delhi"
+    },
+    {
+        "Match": 40,
+        "Date": "April 28, Tuesday",
+        "Fixture": "Punjab Kings vs Rajasthan Royals",
+        "Time": "19:30:00",
+        "Venue": "New Chandigarh"
+    },
+    {
+        "Match": 41,
+        "Date": "April 29, Wednesday",
+        "Fixture": "Mumbai Indians vs Sunrisers Hyderabad",
+        "Time": "19:30:00",
+        "Venue": "Mumbai"
+    },
+    {
+        "Match": 42,
+        "Date": "April 30, Thursday",
+        "Fixture": "Gujarat Titans vs Royal Challengers Bengaluru",
+        "Time": "19:30:00",
+        "Venue": "Ahmedabad"
+    },
+    {
+        "Match": 43,
+        "Date": "May 1, Friday",
+        "Fixture": "Rajasthan Royals vs Delhi Capitals",
+        "Time": "19:30:00",
+        "Venue": "Jaipur"
+    },
+    {
+        "Match": 44,
+        "Date": "May 2, Saturday",
+        "Fixture": "Chennai Super Kings vs Mumbai Indians",
+        "Time": "19:30:00",
+        "Venue": "Chennai"
+    },
+    {
+        "Match": 45,
+        "Date": "May 3, Sunday",
+        "Fixture": "Sunrisers Hyderabad vs Kolkata Knight Riders",
+        "Time": "15:30:00",
+        "Venue": "Hyderabad"
+    },
+    {
+        "Match": 46,
+        "Date": "May 3, Sunday",
+        "Fixture": "Gujarat Titans vs Punjab Kings",
+        "Time": "19:30:00",
+        "Venue": "Ahmedabad"
+    },
+    {
+        "Match": 47,
+        "Date": "May 4, Monday",
+        "Fixture": "Mumbai Indians vs Lucknow Super Giants",
+        "Time": "19:30:00",
+        "Venue": "Mumbai"
+    },
+    {
+        "Match": 48,
+        "Date": "May 5, Tuesday",
+        "Fixture": "Delhi Capitals vs Chennai Super Kings",
+        "Time": "19:30:00",
+        "Venue": "Delhi"
+    },
+    {
+        "Match": 49,
+        "Date": "May 6, Wednesday",
+        "Fixture": "Sunrisers Hyderabad vs Punjab Kings",
+        "Time": "19:30:00",
+        "Venue": "Hyderabad"
+    },
+    {
+        "Match": 50,
+        "Date": "May 7, Thursday",
+        "Fixture": "Lucknow Super Giants vs Royal Challengers Bengaluru",
+        "Time": "19:30:00",
+        "Venue": "Lucknow"
+    },
+    {
+        "Match": 51,
+        "Date": "May 8, Friday",
+        "Fixture": "Delhi Capitals vs Kolkata Knight Riders",
+        "Time": "19:30:00",
+        "Venue": "Delhi"
+    },
+    {
+        "Match": 52,
+        "Date": "May 9, Saturday",
+        "Fixture": "Rajasthan Royals vs Gujarat Titans",
+        "Time": "19:30:00",
+        "Venue": "Jaipur"
+    },
+    {
+        "Match": 53,
+        "Date": "May 10, Sunday",
+        "Fixture": "Chennai Super Kings vs Lucknow Super Giants",
+        "Time": "15:30:00",
+        "Venue": "Chennai"
+    },
+    {
+        "Match": 54,
+        "Date": "May 10, Sunday",
+        "Fixture": "Royal Challengers Bengaluru vs Mumbai Indians",
+        "Time": "19:30:00",
+        "Venue": "Raipur"
+    },
+    {
+        "Match": 55,
+        "Date": "May 11, Monday",
+        "Fixture": "Punjab Kings vs Delhi Capitals",
+        "Time": "19:30:00",
+        "Venue": "Dharamshala"
+    },
+    {
+        "Match": 56,
+        "Date": "May 12, Tuesday",
+        "Fixture": "Gujarat Titans vs Sunrisers Hyderabad",
+        "Time": "19:30:00",
+        "Venue": "Ahmedabad"
+    },
+    {
+        "Match": 57,
+        "Date": "May 13, Wednesday",
+        "Fixture": "Royal Challengers Bengaluru vs Kolkata Knight Riders",
+        "Time": "19:30:00",
+        "Venue": "Raipur"
+    },
+    {
+        "Match": 58,
+        "Date": "May 14, Thursday",
+        "Fixture": "Punjab Kings vs Mumbai Indians",
+        "Time": "19:30:00",
+        "Venue": "Dharamshala"
+    },
+    {
+        "Match": 59,
+        "Date": "May 15, Friday",
+        "Fixture": "Lucknow Super Giants vs Chennai Super Kings",
+        "Time": "19:30:00",
+        "Venue": "Lucknow"
+    },
+    {
+        "Match": 60,
+        "Date": "May 16, Saturday",
+        "Fixture": "Kolkata Knight Riders vs Gujarat Titans",
+        "Time": "19:30:00",
+        "Venue": "Kolkata"
+    },
+    {
+        "Match": 61,
+        "Date": "May 17, Sunday",
+        "Fixture": "Punjab Kings vs Royal Challengers Bengaluru",
+        "Time": "15:30:00",
+        "Venue": "Dharamshala"
+    },
+    {
+        "Match": 62,
+        "Date": "May 17, Sunday",
+        "Fixture": "Delhi Capitals vs Rajasthan Royals",
+        "Time": "19:30:00",
+        "Venue": "Delhi"
+    },
+    {
+        "Match": 63,
+        "Date": "May 18, Monday",
+        "Fixture": "Chennai Super Kings vs Sunrisers Hyderabad",
+        "Time": "19:30:00",
+        "Venue": "Chennai"
+    },
+    {
+        "Match": 64,
+        "Date": "May 19, Tuesday",
+        "Fixture": "Rajasthan Royals vs Lucknow Super Giants",
+        "Time": "19:30:00",
+        "Venue": "Jaipur"
+    },
+    {
+        "Match": 65,
+        "Date": "May 20, Wednesday",
+        "Fixture": "Kolkata Knight Riders vs Mumbai Indians",
+        "Time": "19:30:00",
+        "Venue": "Kolkata"
+    },
+    {
+        "Match": 66,
+        "Date": "May 21, Thursday",
+        "Fixture": "Chennai Super Kings vs Gujarat Titans",
+        "Time": "19:30:00",
+        "Venue": "Chennai"
+    },
+    {
+        "Match": 67,
+        "Date": "May 22, Friday",
+        "Fixture": "Sunrisers Hyderabad vs Royal Challengers Bengaluru",
+        "Time": "19:30:00",
+        "Venue": "Hyderabad"
+    },
+    {
+        "Match": 68,
+        "Date": "May 23, Saturday",
+        "Fixture": "Lucknow Super Giants vs Punjab Kings",
+        "Time": "19:30:00",
+        "Venue": "Lucknow"
+    },
+    {
+        "Match": 69,
+        "Date": "May 24, Sunday",
+        "Fixture": "Mumbai Indians vs Rajasthan Royals",
+        "Time": "15:30:00",
+        "Venue": "Mumbai"
+    },
+    {
+        "Match": 70,
+        "Date": "May 24, Sunday",
+        "Fixture": "Kolkata Knight Riders vs Delhi Capitals",
+        "Time": "19:30:00",
+        "Venue": "Kolkata"
+    }
+]

@@ -1,0 +1,842 @@
+[
+    {
+        "playerName": "Axar Patel",
+        "owner": "Bhushan",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Vice-Captain (Delhi Capitals)"
+    },
+    {
+        "playerName": "Rishabh Pant",
+        "owner": "Bhushan",
+        "team": "Lucknow Super Giants",
+        "points": 0,
+        "role": "Player (Lucknow Super Giants)"
+    },
+    {
+        "playerName": "Rohit Sharma",
+        "owner": "Bhushan",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "MS Dhoni",
+        "owner": "Bhushan",
+        "team": "Chennai Super Kings",
+        "points": 0,
+        "role": "Player (Chennai Super Kings)"
+    },
+    {
+        "playerName": "Rajat Patidar",
+        "owner": "Bhushan",
+        "team": "Royal Challengers Bengaluru",
+        "points": 39,
+        "role": "Player (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Krunal Pandya",
+        "owner": "Bhushan",
+        "team": "Royal Challengers Bengaluru",
+        "points": 0,
+        "role": "Player (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Ravi Bishnoi",
+        "owner": "Bhushan",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Player (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Marcus Stoinis",
+        "owner": "Bhushan",
+        "team": "Punjab Kings",
+        "points": 0,
+        "role": "Player (Punjab Kings)"
+    },
+    {
+        "playerName": "Washington Sundar",
+        "owner": "Bhushan",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Player (Gujarat Titans)"
+    },
+    {
+        "playerName": "Rashid Khan",
+        "owner": "Bhushan",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Player (Gujarat Titans)"
+    },
+    {
+        "playerName": "Trent Boult",
+        "owner": "Bhushan",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Travis Head",
+        "owner": "Bhushan",
+        "team": "Sunrisers Hyderabad",
+        "points": 26,
+        "role": "Captain (Sunrisers Hyderabad)"
+    },
+    {
+        "playerName": "Harpreet Brar",
+        "owner": "Bhushan",
+        "team": "Punjab Kings",
+        "points": 0,
+        "role": "Player (Punjab Kings)"
+    },
+    {
+        "playerName": "Nathan Ellis",
+        "owner": "Bhushan",
+        "team": "Chennai Super Kings",
+        "points": 0,
+        "role": "Player (Chennai Super Kings)"
+    },
+    {
+        "playerName": "Mohammed Shami",
+        "owner": "Bhushan",
+        "team": "Lucknow Super Giants",
+        "points": 0,
+        "role": "Player (Lucknow Super Giants)"
+    },
+    {
+        "playerName": "Ryan Rickelton",
+        "owner": "Mayur",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Mitchell Marsh",
+        "owner": "Mayur",
+        "team": "Lucknow Super Giants",
+        "points": 0,
+        "role": "Vice-Captain (Lucknow Super Giants)"
+    },
+    {
+        "playerName": "Mitchell Starc",
+        "owner": "Mayur",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Ajinkya Rahane",
+        "owner": "Mayur",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Pat Cummins",
+        "owner": "Mayur",
+        "team": "Sunrisers Hyderabad",
+        "points": 0,
+        "role": "Player (Sunrisers Hyderabad)"
+    },
+    {
+        "playerName": "Sunil Narine",
+        "owner": "Mayur",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Harshal Patel",
+        "owner": "Mayur",
+        "team": "Sunrisers Hyderabad",
+        "points": 0,
+        "role": "Player (Sunrisers Hyderabad)"
+    },
+    {
+        "playerName": "Ravindra Jadeja",
+        "owner": "Mayur",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Player (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Ruturaj Gaikwad",
+        "owner": "Mayur",
+        "team": "Chennai Super Kings",
+        "points": 0,
+        "role": "Player (Chennai Super Kings)"
+    },
+    {
+        "playerName": "Shardul Thakur",
+        "owner": "Mayur",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Ishan Kishan",
+        "owner": "Mayur",
+        "team": "Sunrisers Hyderabad",
+        "points": 212,
+        "role": "Captain (Sunrisers Hyderabad)"
+    },
+    {
+        "playerName": "Ramandeep Singh",
+        "owner": "Mayur",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Bhuvneshwar Kumar",
+        "owner": "Mayur",
+        "team": "Royal Challengers Bengaluru",
+        "points": 25,
+        "role": "Player (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Nehal Wadhera",
+        "owner": "Mayur",
+        "team": "Punjab Kings",
+        "points": 0,
+        "role": "Player (Punjab Kings)"
+    },
+    {
+        "playerName": "Suyash Sharma",
+        "owner": "Mayur",
+        "team": "Royal Challengers Bengaluru",
+        "points": 25,
+        "role": "Player (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Nicholas Pooran",
+        "owner": "Sherry",
+        "team": "Lucknow Super Giants",
+        "points": 0,
+        "role": "Player (Lucknow Super Giants)"
+    },
+    {
+        "playerName": "Aiden Markram",
+        "owner": "Sherry",
+        "team": "Lucknow Super Giants",
+        "points": 0,
+        "role": "Vice-Captain (Lucknow Super Giants)"
+    },
+    {
+        "playerName": "Heinrich Klaasen",
+        "owner": "Sherry",
+        "team": "Sunrisers Hyderabad",
+        "points": 51,
+        "role": "Player (Sunrisers Hyderabad)"
+    },
+    {
+        "playerName": "Shubman Gill",
+        "owner": "Sherry",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Captain (Gujarat Titans)"
+    },
+    {
+        "playerName": "Quinton de Kock",
+        "owner": "Sherry",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Jasprit Bumrah",
+        "owner": "Sherry",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Mayank Yadav",
+        "owner": "Sherry",
+        "team": "Lucknow Super Giants",
+        "points": 0,
+        "role": "Player (Lucknow Super Giants)"
+    },
+    {
+        "playerName": "Vipraj Nigam",
+        "owner": "Sherry",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Aniket Verma",
+        "owner": "Sherry",
+        "team": "Sunrisers Hyderabad",
+        "points": 54,
+        "role": "Player (Sunrisers Hyderabad)"
+    },
+    {
+        "playerName": "Jaydev Unadkat",
+        "owner": "Sherry",
+        "team": "Sunrisers Hyderabad",
+        "points": 37,
+        "role": "Player (Sunrisers Hyderabad)"
+    },
+    {
+        "playerName": "Rahul Tewatia",
+        "owner": "Sherry",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Player (Gujarat Titans)"
+    },
+    {
+        "playerName": "Shahrukh Khan",
+        "owner": "Sherry",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Player (Gujarat Titans)"
+    },
+    {
+        "playerName": "Suryakumar Yadav",
+        "owner": "Sherry",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Deepak Chahar",
+        "owner": "Sherry",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Glenn Phillips",
+        "owner": "Sherry",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Player (Gujarat Titans)"
+    },
+    {
+        "playerName": "Abhishek Sharma",
+        "owner": "Sanjay",
+        "team": "Sunrisers Hyderabad",
+        "points": 13.5,
+        "role": "Vice-Captain (Sunrisers Hyderabad)"
+    },
+    {
+        "playerName": "Kuldeep Yadav",
+        "owner": "Sanjay",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Khaleel Ahmed",
+        "owner": "Sanjay",
+        "team": "Chennai Super Kings",
+        "points": 0,
+        "role": "Player (Chennai Super Kings)"
+    },
+    {
+        "playerName": "Noor Ahmad",
+        "owner": "Sanjay",
+        "team": "Chennai Super Kings",
+        "points": 0,
+        "role": "Player (Chennai Super Kings)"
+    },
+    {
+        "playerName": "Jofra Archer",
+        "owner": "Sanjay",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Player (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Prasidh Krishna",
+        "owner": "Sanjay",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Player (Gujarat Titans)"
+    },
+    {
+        "playerName": "Marco Jansen",
+        "owner": "Sanjay",
+        "team": "Punjab Kings",
+        "points": 0,
+        "role": "Player (Punjab Kings)"
+    },
+    {
+        "playerName": "Will Jacks",
+        "owner": "Sanjay",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Yash Dayal",
+        "owner": "Sanjay",
+        "team": "Royal Challengers Bengaluru",
+        "points": 0,
+        "role": "Player (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Ayush Mhatre",
+        "owner": "Sanjay",
+        "team": "Chennai Super Kings",
+        "points": 0,
+        "role": "Player (Chennai Super Kings)"
+    },
+    {
+        "playerName": "Sandeep Sharma",
+        "owner": "Sanjay",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Player (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Devdutt Padikkal",
+        "owner": "Sanjay",
+        "team": "Royal Challengers Bengaluru",
+        "points": 108,
+        "role": "Player (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Angkrish Raghuvanshi",
+        "owner": "Sanjay",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Ayush Badoni",
+        "owner": "Sanjay",
+        "team": "Lucknow Super Giants",
+        "points": 0,
+        "role": "Player (Lucknow Super Giants)"
+    },
+    {
+        "playerName": "Cameron Green",
+        "owner": "Sanjay",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Captain (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Phil Salt",
+        "owner": "Kuljeet",
+        "team": "Royal Challengers Bengaluru",
+        "points": 34,
+        "role": "Player (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Shreyas Iyer",
+        "owner": "Kuljeet",
+        "team": "Punjab Kings",
+        "points": 0,
+        "role": "Vice-Captain (Punjab Kings)"
+    },
+    {
+        "playerName": "Hardik Pandya",
+        "owner": "Kuljeet",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Captain (Mumbai Indians)"
+    },
+    {
+        "playerName": "Dhruv Jurel",
+        "owner": "Kuljeet",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Player (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Mohammed Siraj",
+        "owner": "Kuljeet",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Player (Gujarat Titans)"
+    },
+    {
+        "playerName": "Yuzvendra Chahal",
+        "owner": "Kuljeet",
+        "team": "Punjab Kings",
+        "points": 0,
+        "role": "Player (Punjab Kings)"
+    },
+    {
+        "playerName": "Rachin Ravindra",
+        "owner": "Kuljeet",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Mukesh Kumar",
+        "owner": "Kuljeet",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Tushar Deshpande",
+        "owner": "Kuljeet",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Player (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Sam Curran",
+        "owner": "Kuljeet",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Player (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Dewald Brevis",
+        "owner": "Kuljeet",
+        "team": "Chennai Super Kings",
+        "points": 0,
+        "role": "Player (Chennai Super Kings)"
+    },
+    {
+        "playerName": "Rovman Powell",
+        "owner": "Kuljeet",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Abhishek Porel",
+        "owner": "Kuljeet",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Anuj Rawat",
+        "owner": "Kuljeet",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Player (Gujarat Titans)"
+    },
+    {
+        "playerName": "T. Natarajan",
+        "owner": "Kuljeet",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Sanju Samson",
+        "owner": "Karthik",
+        "team": "Chennai Super Kings",
+        "points": 0,
+        "role": "Captain (Chennai Super Kings)"
+    },
+    {
+        "playerName": "Arshdeep Singh",
+        "owner": "Karthik",
+        "team": "Punjab Kings",
+        "points": 0,
+        "role": "Player (Punjab Kings)"
+    },
+    {
+        "playerName": "Nitish Rana",
+        "owner": "Karthik",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Shivam Dube",
+        "owner": "Karthik",
+        "team": "Chennai Super Kings",
+        "points": 0,
+        "role": "Player (Chennai Super Kings)"
+    },
+    {
+        "playerName": "Jacob Bethell",
+        "owner": "Karthik",
+        "team": "Royal Challengers Bengaluru",
+        "points": 0,
+        "role": "Player (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "David Miller",
+        "owner": "Karthik",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Tim David",
+        "owner": "Karthik",
+        "team": "Royal Challengers Bengaluru",
+        "points": 19,
+        "role": "Player (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Nitish Kumar Reddy",
+        "owner": "Karthik",
+        "team": "Sunrisers Hyderabad",
+        "points": 1,
+        "role": "Player (Sunrisers Hyderabad)"
+    },
+    {
+        "playerName": "Corbin Bosch",
+        "owner": "Karthik",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Venkatesh Iyer",
+        "owner": "Karthik",
+        "team": "Royal Challengers Bengaluru",
+        "points": 0,
+        "role": "Vice-Captain (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Rinku Singh",
+        "owner": "Karthik",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Avesh Khan",
+        "owner": "Karthik",
+        "team": "Lucknow Super Giants",
+        "points": 0,
+        "role": "Player (Lucknow Super Giants)"
+    },
+    {
+        "playerName": "Varun Chakravarthy",
+        "owner": "Karthik",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Lungi Ngidi",
+        "owner": "Karthik",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Shubham Dubey",
+        "owner": "Karthik",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Player (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Sai Sudharsan",
+        "owner": "Ajay",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Player (Gujarat Titans)"
+    },
+    {
+        "playerName": "Virat Kohli",
+        "owner": "Ajay",
+        "team": "Royal Challengers Bengaluru",
+        "points": 200,
+        "role": "Captain (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Priyansh Arya",
+        "owner": "Ajay",
+        "team": "Punjab Kings",
+        "points": 0,
+        "role": "Player (Punjab Kings)"
+    },
+    {
+        "playerName": "Jos Buttler",
+        "owner": "Ajay",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Vice-Captain (Gujarat Titans)"
+    },
+    {
+        "playerName": "Prabhsimran Singh",
+        "owner": "Ajay",
+        "team": "Punjab Kings",
+        "points": 0,
+        "role": "Player (Punjab Kings)"
+    },
+    {
+        "playerName": "Tristan Stubbs",
+        "owner": "Ajay",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Liam Livingstone",
+        "owner": "Ajay",
+        "team": "Sunrisers Hyderabad",
+        "points": 0,
+        "role": "Player (Sunrisers Hyderabad)"
+    },
+    {
+        "playerName": "Ashutosh Sharma",
+        "owner": "Ajay",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Karun Nair",
+        "owner": "Ajay",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Player (Delhi Capitals)"
+    },
+    {
+        "playerName": "Yash Thakur",
+        "owner": "Ajay",
+        "team": "Punjab Kings",
+        "points": 0,
+        "role": "Player (Punjab Kings)"
+    },
+    {
+        "playerName": "Manish Pandey",
+        "owner": "Ajay",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Josh Inglis",
+        "owner": "Ajay",
+        "team": "Lucknow Super Giants",
+        "points": 0,
+        "role": "Player (Lucknow Super Giants)"
+    },
+    {
+        "playerName": "Akash Deep",
+        "owner": "Ajay",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Mitchell Santner",
+        "owner": "Ajay",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Rahul Chahar",
+        "owner": "Ajay",
+        "team": "Chennai Super Kings",
+        "points": 0,
+        "role": "Player (Chennai Super Kings)"
+    },
+    {
+        "playerName": "Yashasvi Jaiswal",
+        "owner": "Shaurabh",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Vice-Captain (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Riyan Parag",
+        "owner": "Shaurabh",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Player (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Josh Hazlewood",
+        "owner": "Shaurabh",
+        "team": "Royal Challengers Bengaluru",
+        "points": 0,
+        "role": "Player (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Vaibhav Arora",
+        "owner": "Shaurabh",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    },
+    {
+        "playerName": "Shimron Hetmyer",
+        "owner": "Shaurabh",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Player (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Shashank Singh",
+        "owner": "Shaurabh",
+        "team": "Punjab Kings",
+        "points": 0,
+        "role": "Player (Punjab Kings)"
+    },
+    {
+        "playerName": "Jitesh Sharma",
+        "owner": "Shaurabh",
+        "team": "Royal Challengers Bengaluru",
+        "points": 0,
+        "role": "Player (Royal Challengers Bengaluru)"
+    },
+    {
+        "playerName": "Naman Dhir",
+        "owner": "Shaurabh",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Sherfane Rutherford",
+        "owner": "Shaurabh",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Abdul Samad",
+        "owner": "Shaurabh",
+        "team": "Lucknow Super Giants",
+        "points": 0,
+        "role": "Player (Lucknow Super Giants)"
+    },
+    {
+        "playerName": "Vaibhav Sooryavanshi",
+        "owner": "Shaurabh",
+        "team": "Rajasthan Royals",
+        "points": 0,
+        "role": "Player (Rajasthan Royals)"
+    },
+    {
+        "playerName": "Tilak Varma",
+        "owner": "Shaurabh",
+        "team": "Mumbai Indians",
+        "points": 0,
+        "role": "Player (Mumbai Indians)"
+    },
+    {
+        "playerName": "Sai Kishore",
+        "owner": "Shaurabh",
+        "team": "Gujarat Titans",
+        "points": 0,
+        "role": "Player (Gujarat Titans)"
+    },
+    {
+        "playerName": "KL Rahul",
+        "owner": "Shaurabh",
+        "team": "Delhi Capitals",
+        "points": 0,
+        "role": "Captain (Delhi Capitals)"
+    },
+    {
+        "playerName": "Finn Allen",
+        "owner": "Shaurabh",
+        "team": "Kolkata Knight Riders",
+        "points": 0,
+        "role": "Player (Kolkata Knight Riders)"
+    }
+]

@@ -1,0 +1,30 @@
+# Ignore everything by default
+*
+
+# Keep gitignore itself
+!.gitignore
+
+# Required app code
+!server.py
+!loadpoints.py
+!script.py
+!README.md
+!requirements.txt
+
+# Required runtime data files
+!players_role.json
+!OwnerDataPlayer.json
+!schedule.json
+!winnings.json
+
+# Required templates
+!templates/
+!templates/IPLPlayerpoints.html
+!templates/IPLPlayerStats.html
+!templates/stats.html
+
+# Ignore Python cache/venv explicitly
+__pycache__/
+*.py[cod]
+.venv/
+venv/

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Search</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th, td {
+            padding: 8px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .typeahead {
+            width: 300px;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        .highlight-yellow {
+            background-color: yellow;
+        }
+        .highlight-green {
+            background-color: green;
+            color: white; /* Optional for better visibility */
+        }
+        .highlight-blue {
+            background-color: blue;
+            color: white; /* Optional for better visibility */
+        }
+    </style>
+</head>
+<body>
+    <h1>Player Search</h1>
+    <input type="text" id="searchBox" class="typeahead" placeholder="Type player name or role (min. 3 characters)">
+    <table id="playerTable">
+        <thead>
+            <tr>
+                <th>Player Name</th>
+                <th>Owner</th>
+                <th>Points</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        async function fetchPlayerData() {
+            try {
+                const response = await fetch('player_role.json');
+                const players = await response.json();
+                initializeSearch(players);
+            } catch (error) {
+                console.error('Error fetching player data:', error);
+            }
+        }
+
+        function initializeSearch(players) {
+            const searchBox = document.getElementById('searchBox');
+            const tableBody = document.getElementById('playerTable').querySelector('tbody');
+
+            searchBox.addEventListener('input', function () {
+                const searchTerm = searchBox.value.toLowerCase();
+
+                // Display results only if at least 3 characters are entered
+                if (searchTerm.length >= 3) {
+                    const filteredPlayers = players.filter(player =>
+                        player.playerName.toLowerCase().includes(searchTerm) ||
+                        player.role.toLowerCase().includes(searchTerm)
+                    );
+
+                    const sortedPlayers = [
+                        ...filteredPlayers.filter(player => player.role.toLowerCase().startsWith('captain')),
+                        ...filteredPlayers.filter(player => player.role.toLowerCase().startsWith('vice-captain')),
+                        ...filteredPlayers
+                            .filter(player =>
+                                !player.role.toLowerCase().startsWith('captain') &&
+                                !player.role.toLowerCase().startsWith('vice-captain'))
+                            .sort((a, b) => b.points - a.points)
+                    ];
+
+                    tableBody.innerHTML = '';
+                    sortedPlayers.forEach(player => {
+                        let rowClass = '';
+                        if (player.role.toLowerCase().startsWith('vice-captain')) {
+                            rowClass = 'highlight-yellow';
+                        } else if (player.role.toLowerCase().startsWith('captain')) {
+                            rowClass = 'highlight-green';
+                        } else if (player.points > 300) {
+                            rowClass = 'highlight-blue'; // Highlight rows in blue if points > 300
+                        }
+                        const row = `<tr class="${rowClass}">
+                            <td>${player.playerName}</td>
+                            <td>${player.owner}</td>
+                            <td>${player.points}</td>
+                            <td>${player.role}</td>
+                        </tr>`;
+                        tableBody.innerHTML += row;
+                    });
+                } else {
+                    tableBody.innerHTML = ''; // Clear the table if less than 3 characters
+                }
+            });
+        }
+
+        // Fetch player data on page load
+        fetchPlayerData();
+    </script>
+</body>
+</html>
