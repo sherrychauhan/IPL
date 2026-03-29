@@ -1,6 +1,9 @@
 import requests
 import json
 import csv
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
 
 def run_script():
     # Replace with the desired URL
@@ -65,8 +68,8 @@ def run_script():
     # Combine data into a third JSON object update the path here
     combined_player_data = []
     existing_client_ids = set()
-    conertjsontocsv (json_data_scorer["toprunsscorers"], "toprunsscorers.csv") 
-    conertjsontocsv (json_data_bowler["mostwickets"], "mostwickets.csv") 
+    conertjsontocsv (json_data_scorer["toprunsscorers"], BASE_DIR / "toprunsscorers.csv") 
+    conertjsontocsv (json_data_bowler["mostwickets"], BASE_DIR / "mostwickets.csv") 
 
     for batting_player in json_data_scorer["toprunsscorers"]:
         # Find matching player in the bowling data
@@ -122,7 +125,7 @@ def run_script():
     # Create a new JSON object
     final_data = {"players": combined_player_data}
 
-    with open(r"OwnerDataPlayer.json", "r") as file:
+    with open(BASE_DIR / "OwnerDataPlayer.json", "r", encoding="utf-8") as file:
         players_data = json.load(file)
     print("player2 loaded")
 
@@ -147,10 +150,10 @@ def run_script():
         player["points"] = player_dictionary.get(player["playerName"],0)
         player["role"] = player["role"] + " ("+  player["team"] + ")"
     # File name
-    file_name = r"players_role.json"
+    file_name = BASE_DIR / "players_role.json"
 
     # Writing JSON data to file
-    with open(file_name, "w") as json_file:
+    with open(file_name, "w", encoding="utf-8") as json_file:
         json.dump(players_data, json_file, indent=4)
 
     return f"Data successfully written to {file_name}"
@@ -165,4 +168,5 @@ def conertjsontocsv(data, file_name):
         writer.writeheader()  # Write header row
         writer.writerows(data)  # Write data rows
 
-run_script()
+if __name__ == '__main__':
+    run_script()

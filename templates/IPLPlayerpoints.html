@@ -154,7 +154,7 @@
 
     <script>
        // Fetch today's fixtures from the server
-        fetch("/today-fixtures")
+        fetch("today-fixtures")
             .then(response => response.json()) // Parse JSON response
             .then(data => {
                 console.log("Today's Fixtures:", data); // Log the data for debugging   
@@ -186,7 +186,7 @@
                 fixturesHeader.textContent = "Error fetching today's fixtures";
             });
         // Fetch JSON from the Python server
-        fetch('/player_role.json') // Replace with your hosted JSON file path if needed
+        fetch('player_role.json') // Replace with your hosted JSON file path if needed
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -312,7 +312,7 @@
         async function callFlaskScript() {
              try {
                 // Send a POST request to the Flask route
-                 const response = await fetch('/load-points', { method: 'GET' });
+                 const response = await fetch('load-points', { method: 'GET' });
                  const result = await response.json(); // Parse JSON response
                 // Log the result to the console (optional)
                 console.log(result.message);
