@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import script  # Import your Python script
 import loadpoints
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -55,6 +55,27 @@ def get_player_data():
         return jsonify({"error": "File not found"}), 404  # Return error if file does not exist
     except json.JSONDecodeError:
         return jsonify({"error": "Invalid JSON format"}), 500  # Handle JSON parsing errors
+
+
+@app.route("/player-role-meta", methods=["GET"])
+def get_player_role_meta():
+    try:
+        file_path = BASE_DIR / "players_role.json"
+        if not file_path.exists():
+            return jsonify({"error": "File not found"}), 404
+
+        modified_timestamp = file_path.stat().st_mtime
+        modified_utc = datetime.fromtimestamp(modified_timestamp, tz=timezone.utc).isoformat()
+
+        return jsonify(
+            {
+                "file": "players_role.json",
+                "last_modified_utc": modified_utc,
+                "last_modified_epoch": int(modified_timestamp),
+            }
+        )
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route("/players<int:file_no>.json", methods=["GET"])

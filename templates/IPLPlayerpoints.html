@@ -99,6 +99,62 @@
             font-weight: bold;
         }
 
+        .action-panel {
+            margin-top: 20px;
+            padding: 16px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .action-panel h2 {
+            margin: 0 0 8px 0;
+            font-size: 22px;
+        }
+
+        .action-panel p {
+            margin: 0 0 12px 0;
+            color: #555;
+        }
+
+        .last-updated {
+            margin: 0 0 12px 0;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .action-btn {
+            border: 1px solid #333;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .action-btn:hover {
+            opacity: 0.9;
+        }
+
+        .action-btn.secondary {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .action-btn.tertiary {
+            background-color: #f4f4f4;
+            color: #333;
+            border-color: #ccc;
+        }
+
         /* Mobile-specific adjustments */
         @media (max-width: 768px) {
             .tabs {
@@ -127,6 +183,14 @@
                 padding: 8px; /* Reduce tab padding for smaller screens */
                 font-size: 14px; /* Adjust tab font size */
             }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -147,12 +211,61 @@
         <!-- Player tables for each owner will be dynamically added here -->
     </div>
 
-    <h1>Refresh IPL points Script</h1>
-    <!-- Button calls the Flask route -->
-    <button onclick="callFlaskScript()">Reload Data...</button> </br>
-    <button onclick="window.location.href='https://sherrychauhan.pythonanywhere.com/stats';">Go to stats Page to view the winning stats.....</button>
+    <div class="action-panel">
+        <h2>Refresh IPL Points</h2>
+        <p>Update latest points and quickly navigate to related views.</p>
+        <p id="lastUpdatedInfo" class="last-updated">Last Reloaded At (IST): Fetching...</p>
+        <div class="action-buttons">
+            <button class="action-btn" onclick="callFlaskScript()">Reload Data</button>
+            <button class="action-btn secondary" onclick="window.location.href='playerStats';">Go to Player Stats Page</button>
+            <button class="action-btn tertiary" onclick="window.location.href='stats';">Go to Stats Page</button>
+        </div>
+    </div>
 
     <script>
+        function formatToIST(utcTimestamp) {
+            const date = new Date(utcTimestamp);
+            if (Number.isNaN(date.getTime())) {
+                return null;
+            }
+
+            return date.toLocaleString("en-IN", {
+                timeZone: "Asia/Kolkata",
+                year: "numeric",
+                month: "short",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                hour12: true,
+            });
+        }
+
+        async function loadLastUpdatedTimestamp() {
+            const lastUpdatedElement = document.getElementById("lastUpdatedInfo");
+
+            try {
+                const response = await fetch("player-role-meta");
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const metadata = await response.json();
+                const formattedTime = formatToIST(metadata.last_modified_utc);
+
+                if (formattedTime) {
+                    lastUpdatedElement.textContent = `Last Reloaded At (IST): ${formattedTime}`;
+                } else {
+                    lastUpdatedElement.textContent = "Last Reloaded At (IST): Invalid timestamp";
+                }
+            } catch (error) {
+                console.error("Error fetching player file metadata:", error);
+                lastUpdatedElement.textContent = "Last Reloaded At (IST): Unavailable";
+            }
+        }
+
+        loadLastUpdatedTimestamp();
+
        // Fetch today's fixtures from the server
         fetch("today-fixtures")
             .then(response => response.json()) // Parse JSON response

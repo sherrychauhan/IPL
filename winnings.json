@@ -1,152 +1,248 @@
 [
     {
-        "Contest": "Table top batsman after 15 matches =250",
-        "Reason to win": "Nicolas Pooran",
-        "Winner": "Sanjay",
-        "Prize Money": "290"
-    },
-    {
-        "Contest": "Table top batsman after 28=250",
-        "Reason to win": "Sai Sudarshan",
-        "Winner": "Sherry",
-        "Prize Money": "290"
-    },
-    {
-        "Contest": "Table top batsman after 46=250",
+        "Contest": "Table top batsman after 15 matches = 400",
         "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "400"
     },
     {
-        "Contest": "Table top batsman after 61=250",
+        "Contest": "Table top batsman after 30 = 400",
         "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "400"
     },
     {
-        "Contest": "Table top bowler after 15 matches =250",
-        "Reason to win": "Noor Ahmed",
-        "Winner": "Karthik",
-        "Prize Money": "290"
-    },
-    {
-        "Contest": "Table top bowler after 28=250",
-        "Reason to win": "Prasidh Krishna",
-        "Winner": "Mayur",
-        "Prize Money": "290"
-    },
-    {
-        "Contest": "Table top bowler after 46=250",
+        "Contest": "Table top batsman after 45 = 400",
         "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "400"
     },
     {
-        "Contest": "Table top bowler after 61=250",
+        "Contest": "Table top batsman after 60 = 400",
         "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "400"
     },
     {
-        "Contest": "Table top after 15 matches =250",
-        "Reason to win": "Karthik",
-        "Winner": "Karthik",
-        "Prize Money": "290"
-    },
-    {
-        "Contest": "Table top after 28=250",
-        "Reason to win": "Sherry",
-        "Winner": "Sherry",
-        "Prize Money": "290"
-    },
-    {
-        "Contest": "Table top after 46=250",
+        "Contest": "Table top bowler after 15 matches = 400",
         "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "400"
     },
     {
-        "Contest": "Table top after 61=250",
+        "Contest": "Table top bowler after 30 = 400",
         "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "400"
     },
     {
-        "Contest": "Tournament Winners:750",
-        "Reason to win": "Karthik",
-        "Winner": "",
-        "Prize Money": "790"
-    },
-    {
-        "Contest": "Runners-Up:500",
-        "Reason to win": "Sanjay",
-        "Winner": "",
-        "Prize Money": "540"
-    },
-    {
-        "Contest": "Orange Cap:250",
-        "Reason to win": "Nicolas Pooran",
-        "Winner": "",
-        "Prize Money": "290"
-    },
-    {
-        "Contest": "Purple Cap:250",
-        "Reason to win": "Noor Ahmed",
-        "Winner": "",
-        "Prize Money": "290"
-    },
-    {
-        "Contest": "Most Valuable Player(Highest point):250",
+        "Contest": "Table top bowler after 45 = 400",
         "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "400"
     },
     {
-        "Contest": "Most Sixes in the Season:250",
-        "Reason to win": "Nicolas Pooran",
-        "Winner": "",
-        "Prize Money": "290"
-    },
-    {
-        "Contest": "Perfect catch of the season:250",
+        "Contest": "Table top bowler after 60 = 400",
         "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "400"
     },
     {
-        "Contest": "Maximum count of century in your team:250",
-        "Reason to win": "Ishaan Kishan",
+        "Contest": "Table top after 15 matches = 400",
+        "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "400"
     },
     {
-        "Contest": "Highest individual score in one inning=250",
-        "Reason to win": "Ishaan Kishan",
+        "Contest": "Table top after 30 = 400",
+        "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "400"
     },
     {
-        "Contest": "Highest individual wicket in one inning=250",
-        "Reason to win": "Mitchell Starc",
+        "Contest": "Table top after 45 = 400",
+        "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "400"
+    },
+    {
+        "Contest": "Table top after 60 = 400",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "400"
+    },
+    {
+        "Contest": "Tournament Winners: 1000",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "1000"
+    },
+    {
+        "Contest": "Runners-Up: 750",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "750"
+    },
+    {
+        "Contest": "Third place: 500",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "500"
+    },
+    {
+        "Contest": "Worst performance (Bottom team 1) = 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
+    },
+    {
+        "Contest": "Worst performance (Bottom team 2) = 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
+    },
+    {
+        "Contest": "Most Valuable Player 1 (Highest point): 500",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "500"
+    },
+    {
+        "Contest": "Most Valuable Player 2 (Highest point): 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
+    },
+    {
+        "Contest": "Orange Cap 1: 500",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "500"
+    },
+    {
+        "Contest": "Orange Cap 2: 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
+    },
+    {
+        "Contest": "Purple Cap 1: 500",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "500"
+    },
+    {
+        "Contest": "Purple Cap 2: 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
+    },
+    {
+        "Contest": "Highest individual score in one inning = 500",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "500"
+    },
+    {
+        "Contest": "Second Highest individual score in one inning = 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
+    },
+    {
+        "Contest": "Highest individual wicket in one inning = 500",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "500"
+    },
+    {
+        "Contest": "Second Highest individual wicket in one inning = 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
+    },
+    {
+        "Contest": "Most Sixes in the Season: 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
+    },
+    {
+        "Contest": "Most fours in the Season: 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
+    },
+    {
+        "Contest": "Perfect catch of the season: 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
+    },
+    {
+        "Contest": "Maximum count of century in your team: 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
     },
     {
         "Contest": "Highest strike rate min 150 runs = 250",
         "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "250"
     },
     {
         "Contest": "Best economy rate min 20 overs = 250",
         "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "250"
     },
     {
-        "Contest": "Worst performance (Bottom team)=250",
+        "Contest": "First Century - 500",
         "Reason to win": "",
         "Winner": "",
-        "Prize Money": "290"
+        "Prize Money": "500"
+    },
+    {
+        "Contest": "Second Century - 200",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "200"
+    },
+    {
+        "Contest": "Fastest Fifty - 500",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "500"
+    },
+    {
+        "Contest": "Most dot balls - 500",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "500"
+    },
+    {
+        "Contest": "Best Captain - 500",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "500"
+    },
+    {
+        "Contest": "Worst Captain - 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
+    },
+    {
+        "Contest": "Best Vice Captain - 500",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "500"
+    },
+    {
+        "Contest": "Worst Vice Captain - 250",
+        "Reason to win": "",
+        "Winner": "",
+        "Prize Money": "250"
     }
 ]
