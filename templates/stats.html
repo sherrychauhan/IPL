@@ -95,7 +95,7 @@
     <script>
           // Fetch today's fixtures from the server
              // Fetch today's fixtures from the server
-        fetch("/today-fixtures")
+        fetch("today-fixtures")
             .then(response => response.json()) // Parse JSON response
             .then(data => {
                 const fixturesHeader = document.getElementById("fixturesHeader");
@@ -139,7 +139,7 @@
         }
 
         // Fetch the JSON data for winnings from winnings.json
-        fetch("/winnings.json")
+        fetch("winnings.json")
             .then(response => response.json()) // Parse JSON
             .then(winningsData => {
                 const tableBody = document.querySelector("#winningTable tbody");
@@ -207,7 +207,7 @@
             });
 
             // Send updated data to the server
-            fetch("/save-winnings", {
+            fetch("save-winnings", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
