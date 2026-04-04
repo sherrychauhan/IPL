@@ -99,6 +99,42 @@
             font-weight: bold;
         }
 
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 5px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+
         .action-panel {
             margin-top: 20px;
             padding: 16px;
@@ -167,6 +203,10 @@
                 flex: 0 0 calc(33.33% - 10px); /* Show 3 tabs in the visible area on smaller screens */
                 margin-right: 5px;
             }
+            
+            th:nth-child(4), td:nth-child(4) {
+                display: none; /* Hide details column on mobile */
+            }
         }
 
         @media (max-width: 480px) {
@@ -204,6 +244,13 @@
         <!-- Total points and ranks will be dynamically displayed here -->
     </div>
     <h1>Owners and Players</h1>
+    
+    <div style="background-color: #f0f0f0; padding: 10px; margin-bottom: 20px; border-radius: 5px;">
+        <h3>Points Calculation System</h3>
+        <p><strong>Batting Points:</strong> Runs (1pt), Fours (1pt), Sixes (2pts), 50+ runs (8pts), Centuries (16pts), Catches (8pts), Stumpings (12pts)</p>
+        <p><strong>Bowling Points:</strong> Wickets (25pts), Maidens (12pts), 4 wickets (8pts), 5 wickets (16pts)</p>
+        <p><strong>Role Multipliers:</strong> Captain (2x), Vice-Captain (1.5x), Player (1x)</p>
+    </div>
     <div class="tabs" id="tabs">
         <!-- Tabs will be dynamically added here -->
     </div>
@@ -219,6 +266,15 @@
             <button class="action-btn" onclick="callFlaskScript()">Reload Data</button>
             <button class="action-btn secondary" onclick="window.location.href='playerStats';">Go to Player Stats Page</button>
             <button class="action-btn tertiary" onclick="window.location.href='stats';">Go to Stats Page</button>
+        </div>
+    </div>
+
+    <!-- Modal for breakdown -->
+    <div id="breakdownModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Player Breakdown</h2>
+            <div id="modalBody"></div>
         </div>
     </div>
 
@@ -385,6 +441,7 @@
                                 <th>Player Name</th>
                                 <th>Points</th>
                                 <th>Role</th>
+                                <th>Details</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -392,8 +449,9 @@
                                 .map(player => `
                                     <tr class="${player.role.includes('Vice-Captain') ? 'vice-captain' : player.role.includes('Captain') ? 'captain' : ''}">
                                         <td>${player.playerName}</td>
-                                        <td>${player.points}</td>
+                                        <td><a href="#" onclick="showBreakdown('${player.playerName}', ${JSON.stringify(player.breakdown).replace(/"/g, '&quot;')}); return false;" style="color: inherit; text-decoration: underline;">${player.points}</a></td>
                                         <td>${player.role}</td>
+                                        <td>Details</td>
                                     </tr>
                                 `)
                                 .join("")}
@@ -438,7 +496,95 @@
 
 
         }
+        function generateBreakdownHTML(breakdown) {
+            if (!breakdown.batting && !breakdown.bowling) return '<p>No stats available</p>';
+            
+            let html = '<table style="width: 100%; border-collapse: collapse; font-size: 14px;">';
+            html += '<thead><tr style="background-color: #f0f0f0;"><th style="border: 1px solid #ddd; padding: 8px;">Category</th><th style="border: 1px solid #ddd; padding: 8px;">Stat</th><th style="border: 1px solid #ddd; padding: 8px;">Count</th><th style="border: 1px solid #ddd; padding: 8px;">Points/Unit</th><th style="border: 1px solid #ddd; padding: 8px;">Total Points</th></tr></thead>';
+            html += '<tbody>';
+            
+            if (breakdown.batting) {
+                const battingStats = [
+                    { name: 'Total Runs', count: breakdown.batting.TotalRuns, pointsPer: 1 },
+                    { name: 'Fours', count: breakdown.batting.Fours, pointsPer: 1 },
+                    { name: 'Sixes', count: breakdown.batting.Sixes, pointsPer: 2 },
+                    { name: '50+ Runs', count: breakdown.batting.FiftyPlusRuns, pointsPer: 8 },
+                    { name: 'Centuries', count: breakdown.batting.Centuries, pointsPer: 16 },
+                    { name: 'Catches', count: breakdown.batting.Catches, pointsPer: 8 },
+                    { name: 'Stumpings', count: breakdown.batting.Stumpings, pointsPer: 12 }
+                ];
+                
+                battingStats.forEach(stat => {
+                    if (stat.count > 0) {
+                        html += `<tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Batting</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">${stat.name}</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">${stat.count}</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">${stat.pointsPer}</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">${stat.count * stat.pointsPer}</td>
+                        </tr>`;
+                    }
+                });
+                
+                html += `<tr style="background-color: #e8f4f8;">
+                    <td colspan="4" style="border: 1px solid #ddd; padding: 8px; font-weight: bold; text-align: right;">Total Batting Points:</td>
+                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">${breakdown.batting.BattingPoints}</td>
+                </tr>`;
+            }
+            
+            if (breakdown.bowling) {
+                const bowlingStats = [
+                    { name: 'Wickets', count: breakdown.bowling.Wickets, pointsPer: 25 },
+                    { name: 'Maidens', count: breakdown.bowling.Maidens, pointsPer: 12 },
+                    { name: '4 Wickets', count: breakdown.bowling.FourWickets, pointsPer: 8 },
+                    { name: '5 Wickets', count: breakdown.bowling.FiveWickets, pointsPer: 16 }
+                ];
+                
+                bowlingStats.forEach(stat => {
+                    if (stat.count > 0) {
+                        html += `<tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Bowling</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">${stat.name}</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">${stat.count}</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">${stat.pointsPer}</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">${stat.count * stat.pointsPer}</td>
+                        </tr>`;
+                    }
+                });
+                
+                html += `<tr style="background-color: #f8e8e8;">
+                    <td colspan="4" style="border: 1px solid #ddd; padding: 8px; font-weight: bold; text-align: right;">Total Bowling Points:</td>
+                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">${breakdown.bowling.BowlingPoints}</td>
+                </tr>`;
+            }
+            
+            const totalPoints = (breakdown.batting ? breakdown.batting.BattingPoints : 0) + (breakdown.bowling ? breakdown.bowling.BowlingPoints : 0);
+            html += `<tr style="background-color: #e8f8e8;">
+                <td colspan="4" style="border: 1px solid #ddd; padding: 8px; font-weight: bold; text-align: right;">Combined Points:</td>
+                <td style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold; color: #2e7d32;">${totalPoints}</td>
+            </tr>`;
+            
+            html += '</tbody></table>';
+            return html;
+        }
 
+        function showBreakdown(playerName, breakdown) {
+            document.getElementById('modalTitle').textContent = `${playerName} - Points Breakdown`;
+            document.getElementById('modalBody').innerHTML = generateBreakdownHTML(breakdown);
+            document.getElementById('breakdownModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('breakdownModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('breakdownModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
 
     </script>
 </body>

@@ -82,8 +82,42 @@ def run_script():
         # Calculate total points
         if bowling_player:
             total_points = batting_player["Points"] + bowling_player["Points"]
+            batting_breakdown = {
+                "TotalRuns": batting_player.get("TotalRuns", 0),
+                "Fours": batting_player.get("Fours", 0),
+                "Sixes": batting_player.get("Sixes", 0),
+                "FiftyPlusRuns": batting_player.get("FiftyPlusRuns", 0),
+                "Centuries": batting_player.get("Centuries", 0),
+                "Catches": batting_player.get("Catches", 0),
+                "Stumpings": batting_player.get("Stumpings", 0),
+                "BattingPoints": batting_player["Points"]
+            }
+            bowling_breakdown = {
+                "Wickets": bowling_player.get("Wickets", 0),
+                "Maidens": bowling_player.get("Maidens", 0),
+                "FourWickets": bowling_player.get("FourWickets", 0),
+                "FiveWickets": bowling_player.get("FiveWickets", 0),
+                "BowlingPoints": bowling_player["Points"]
+            }
         else:
             total_points = batting_player["Points"]
+            batting_breakdown = {
+                "TotalRuns": batting_player.get("TotalRuns", 0),
+                "Fours": batting_player.get("Fours", 0),
+                "Sixes": batting_player.get("Sixes", 0),
+                "FiftyPlusRuns": batting_player.get("FiftyPlusRuns", 0),
+                "Centuries": batting_player.get("Centuries", 0),
+                "Catches": batting_player.get("Catches", 0),
+                "Stumpings": batting_player.get("Stumpings", 0),
+                "BattingPoints": batting_player["Points"]
+            }
+            bowling_breakdown = {
+                "Wickets": 0,
+                "Maidens": 0,
+                "FourWickets": 0,
+                "FiveWickets": 0,
+                "BowlingPoints": 0
+            }
 
         if batting_player["StrikerName"] not in existing_client_ids:
             # Create combined player data
@@ -91,7 +125,11 @@ def run_script():
                 "PlayerName": batting_player["StrikerName"],
                 "ClientPlayerID": batting_player["ClientPlayerID"],
                 "Points": total_points,
-                "teamName" : batting_player["TeamName"]
+                "teamName" : batting_player["TeamName"],
+                "breakdown": {
+                    "batting": batting_breakdown,
+                    "bowling": bowling_breakdown
+                }
             })
             existing_client_ids.add(batting_player["StrikerName"])
         
@@ -107,8 +145,42 @@ def run_script():
         # Calculate total points
         if batting_player:
             total_points = batting_player["Points"] + bowling_player["Points"]
+            batting_breakdown = {
+                "TotalRuns": batting_player.get("TotalRuns", 0),
+                "Fours": batting_player.get("Fours", 0),
+                "Sixes": batting_player.get("Sixes", 0),
+                "FiftyPlusRuns": batting_player.get("FiftyPlusRuns", 0),
+                "Centuries": batting_player.get("Centuries", 0),
+                "Catches": batting_player.get("Catches", 0),
+                "Stumpings": batting_player.get("Stumpings", 0),
+                "BattingPoints": batting_player["Points"]
+            }
+            bowling_breakdown = {
+                "Wickets": bowling_player.get("Wickets", 0),
+                "Maidens": bowling_player.get("Maidens", 0),
+                "FourWickets": bowling_player.get("FourWickets", 0),
+                "FiveWickets": bowling_player.get("FiveWickets", 0),
+                "BowlingPoints": bowling_player["Points"]
+            }
         else:
             total_points = bowling_player["Points"]
+            batting_breakdown = {
+                "TotalRuns": 0,
+                "Fours": 0,
+                "Sixes": 0,
+                "FiftyPlusRuns": 0,
+                "Centuries": 0,
+                "Catches": 0,
+                "Stumpings": 0,
+                "BattingPoints": 0
+            }
+            bowling_breakdown = {
+                "Wickets": bowling_player.get("Wickets", 0),
+                "Maidens": bowling_player.get("Maidens", 0),
+                "FourWickets": bowling_player.get("FourWickets", 0),
+                "FiveWickets": bowling_player.get("FiveWickets", 0),
+                "BowlingPoints": bowling_player["Points"]
+            }
 
         # Create combined player data
         if bowling_player["BowlerName"] not in existing_client_ids:
@@ -117,7 +189,11 @@ def run_script():
                 "PlayerName": bowling_player["BowlerName"],
                 "ClientPlayerID": bowling_player["ClientPlayerID"],
                 "Points": total_points,
-                "teamName" : bowling_player["TeamName"]
+                "teamName" : bowling_player["TeamName"],
+                "breakdown": {
+                    "batting": batting_breakdown,
+                    "bowling": bowling_breakdown
+                }
                
             })
             existing_client_ids.add(bowling_player["BowlerName"])
@@ -131,6 +207,7 @@ def run_script():
 
     player_dictionary = {}
     player_teamName_dictionary = {}
+    player_breakdown_dictionary = {}
 
     for f_player in final_data["players"]:
         # Find matching player in the bowling data
@@ -144,10 +221,12 @@ def run_script():
             total_points = f_player["Points"]
             player_dictionary[owner_player["playerName"]] = total_points * ( 1.5 if owner_player["role"] == "Vice-Captain" else 2 if owner_player["role"] == "Captain" else 1)         
             player_teamName_dictionary[owner_player["playerName"]] = f_player["teamName"]
+            player_breakdown_dictionary[owner_player["playerName"]] = f_player["breakdown"]
 
         
     for player in players_data:
         player["points"] = player_dictionary.get(player["playerName"],0)
+        player["breakdown"] = player_breakdown_dictionary.get(player["playerName"], {})
         player["role"] = player["role"] + " ("+  player["team"] + ")"
     # File name
     file_name = BASE_DIR / "players_role.json"
