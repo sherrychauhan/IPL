@@ -1,11 +1,22 @@
 import requests
 import json
 import csv
+import re
 from pathlib import Path
+from datetime import datetime, timedelta, timezone
 
 BASE_DIR = Path(__file__).resolve().parent
+IST_OFFSET = timedelta(hours=5, minutes=30)
 
 def run_script():
+    # Load cache
+    cache_file = BASE_DIR / "player_stats_cache.json"
+    if cache_file.exists():
+        with open(cache_file, "r", encoding="utf-8") as f:
+            cache = json.load(f)
+    else:
+        cache = {}
+
     # Replace with the desired URL
     url = "https://ipl-stats-sports-mechanic.s3.ap-south-1.amazonaws.com/ipl/feeds/stats/284-toprunsscorers.js?callback=ontoprunsscorers"
     text_content = ""
@@ -36,14 +47,151 @@ def run_script():
     json_data_scorer = json.loads(text_content)
     json_data_bowler = json.loads(text_content2)
 
+    def extract_callback_json(js_text: str, callback_name: str):
+        match = re.search(rf"{callback_name}\s*\(", js_text, flags=re.IGNORECASE)
+        if not match:
+            return None
+
+        start = match.end()
+        while start < len(js_text) and js_text[start].isspace():
+            start += 1
+
+        if start >= len(js_text) or js_text[start] != "{":
+            return None
+
+        depth = 0
+        in_string = False
+        escape = False
+        end = start
+        for idx, char in enumerate(js_text[start:], start):
+            if escape:
+                escape = False
+                continue
+            if char == "\\":
+                escape = True
+                continue
+            if char == '"':
+                in_string = not in_string
+            if in_string:
+                continue
+            if char == '{':
+                depth += 1
+            elif char == '}':
+                depth -= 1
+                if depth == 0:
+                    end = idx + 1
+                    break
+
+        if depth != 0:
+            return None
+
+        try:
+            return json.loads(js_text[start:end])
+        except json.JSONDecodeError:
+            return None
+
+    def is_cache_valid(fetch_timestamp_str):
+        from datetime import time
+        fetch_utc = datetime.fromisoformat(fetch_timestamp_str)
+        fetch_ist = fetch_utc + IST_OFFSET
+        current_ist = datetime.now(timezone.utc) + IST_OFFSET
+        return (fetch_ist.date() == current_ist.date() and 
+                current_ist.time() < time(23, 0))
+
+    def fetch_player_2026_batting(client_id: str):
+        if client_id in cache and is_cache_valid(cache[client_id]['timestamp']):
+            return cache[client_id]['data']
+        
+        player_url = (
+            f"https://ipl-stats-sports-mechanic.s3.ap-south-1.amazonaws.com/ipl/feeds/stats/player/{client_id}-playerstats.js"
+        )
+        result = None
+        try:
+            response = requests.get(player_url, timeout=30)
+            response.raise_for_status()
+            payload = extract_callback_json(response.text, "onPlayerStats")
+            if not payload:
+                result = None
+            else:
+                batting_list = payload.get("Batting") or payload.get("batting") or []
+                if not isinstance(batting_list, list):
+                    result = None
+                else:
+                    for item in batting_list:
+                        if str(item.get("Year")) == "2026":
+                            result = item
+                            break
+        except requests.exceptions.RequestException as e:
+            print(f"Error fetching player stats for ID {client_id}: {e}")
+            result = None
+        
+        cache[client_id] = {'data': result, 'timestamp': datetime.now(timezone.utc).isoformat()}
+        return result
+
+    def create_missing_batting_entry(bowler, batting_2026):
+        return {
+            "StrikerName": bowler.get("BowlerName", ""),
+            "PlayerId": batting_2026.get("PlayerId", bowler.get("ClientPlayerID", "")) if batting_2026 else bowler.get("ClientPlayerID", ""),
+            "Matches": batting_2026.get("Matches", "0") if batting_2026 else "0",
+            "PlayerDOB": "0000-00-00",
+            "RightHandedBat": "",
+            "Nationality": "",
+            "TCompetitionID": batting_2026.get("CompetitionId", "") if batting_2026 else "",
+            "TStrikerID": "",
+            "TTeamID": "",
+            "TeamCode": batting_2026.get("TeamShortName", "") if batting_2026 else "",
+            "TeamName": batting_2026.get("TeamName", "") if batting_2026 else "",
+            "CompetitionID": batting_2026.get("CompetitionId", "") if batting_2026 else "",
+            "TeamID": "",
+            "StrikerID": "",
+            "Innings": batting_2026.get("Innings", "0") if batting_2026 else "0",
+            "Extras": "0",
+            "TotalRuns": batting_2026.get("Runs", "0") if batting_2026 else "0",
+            "Balls": batting_2026.get("Balls", "0") if batting_2026 else "0",
+            "Dotballs": "0",
+            "StrikeRate": batting_2026.get("StrikeRate", "0") if batting_2026 else "0",
+            "DBPercent": "0",
+            "DBFreq": "0",
+            "BdryFreq": "0",
+            "BdryPercent": "0",
+            "RPSS": "0",
+            "ScoringBalls": "0",
+            "Ones": "0",
+            "Twos": "0",
+            "Threes": "0",
+            "Fours": batting_2026.get("Fours", "0") if batting_2026 else "0",
+            "Sixes": batting_2026.get("Sixes", "0") if batting_2026 else "0",
+            "Outs": "0",
+            "NotOuts": batting_2026.get("NotOuts", "0") if batting_2026 else "0",
+            "BattingAveragesss": batting_2026.get("BattingAvg", "0") if batting_2026 else "0",
+            "FiftyPlusRuns": batting_2026.get("Fifties", "0") if batting_2026 else "0",
+            "Centuries": batting_2026.get("Hundreds", "0") if batting_2026 else "0",
+            "DoubleCenturies": "0",
+            "HighestScore": batting_2026.get("HighestScore", "0") if batting_2026 else "0",
+            "BattingAverage": batting_2026.get("BattingAvg", "0") if batting_2026 else "0",
+            "Catches": batting_2026.get("Catches", "0") if batting_2026 else "0",
+            "Stumpings": batting_2026.get("Stumpings", "0") if batting_2026 else "0",
+            "ClientPlayerID": bowler.get("ClientPlayerID", ""),
+            "Points": 0,
+        }
+
+    bowler_names = {player["StrikerName"] for player in json_data_scorer["toprunsscorers"]}
+    for bowler in json_data_bowler["mostwickets"]:
+        if bowler.get("BowlerName") not in bowler_names:
+            batting_2026 = fetch_player_2026_batting(bowler.get("ClientPlayerID", ""))
+            json_data_scorer["toprunsscorers"].append(
+                create_missing_batting_entry(bowler, batting_2026)
+            )
+            bowler_names.add(bowler.get("BowlerName"))
+
     def calculate_points(player):
-        q = int(player.get("TotalRuns", 0))                 # Q Column: Total Runs
-        ad = int(player.get("Fours", 0))                   # AD Column: Fours
-        ae = int(player.get("Sixes", 0))                   # AE Column: Sixes
-        ai = int(player.get("FiftyPlusRuns", 0))           # AI Column: FiftyPlusRuns
-        aj = int(player.get("Centuries", 0))               # AJ Column: Centuries
-        an = int(player.get("Catches", 0))                 # AN Column: Catches
-        ao = int(player.get("Stumpings", 0))               # AO Column: Stumpings
+        q = int(player.get("TotalRuns") or 0)                 # Q Column: Total Runs
+        ad = int(player.get("Fours") or 0)                   # AD Column: Fours
+        ae = int(player.get("Sixes") or 0)                   # AE Column: Sixes
+        ai = int(player.get("FiftyPlusRuns") or 0)           # AI Column: FiftyPlusRuns
+        aj = int(player.get("Centuries") or 0)               # AJ Column: Centuries
+        an = int(player.get("Catches") or 0)                 # AN Column: Catches
+        ao = int(player.get("Stumpings") or 0)               # AO Column: Stumpings
 
         # Calculate points
         return q + ad + (2 * ae) + (8 * ai) + (aj * 16) + (8 * an) + (ao * 12)
@@ -234,6 +382,10 @@ def run_script():
     # Writing JSON data to file
     with open(file_name, "w", encoding="utf-8") as json_file:
         json.dump(players_data, json_file, indent=4)
+
+    # Save cache
+    with open(cache_file, "w", encoding="utf-8") as f:
+        json.dump(cache, f, indent=4)
 
     return f"Data successfully written to {file_name}"
 
